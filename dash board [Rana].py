@@ -7,7 +7,7 @@ from dash import dcc, html
 from dash.dependencies import Input, Output
 
 # Read Data 
-df = pd.read_csv(r"C:\Users\Rana\Downloads\KaggleV2-May-2016.csv")
+df = pd.read_csv(r"KaggleV2-May-2016.csv")
 
 # Data Preprocessing 
 df['ScheduledDay'] = pd.to_datetime(df['ScheduledDay'])
@@ -95,4 +95,5 @@ def update_graphs(selected_neigh, selected_gender):
 # Run App 
 if __name__ == '__main__':
     app.run(debug=True, port=8050)
+
 
